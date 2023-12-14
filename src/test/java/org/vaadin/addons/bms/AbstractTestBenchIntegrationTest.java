@@ -1,21 +1,18 @@
-package org.vaadin.addons.sample;
+package org.vaadin.addons.bms;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.vaadin.testbench.Parameters;
 import com.vaadin.testbench.ScreenshotOnFailureRule;
 import com.vaadin.testbench.TestBench;
-import com.vaadin.testbench.TestBenchTestCase;
 import com.vaadin.testbench.parallel.ParallelTest;
 
 /**
@@ -98,11 +95,12 @@ public abstract class AbstractTestBenchIntegrationTest extends ParallelTest {
 
     @Before
     public void setup() throws Exception {
+        System.setProperty("webdriver.chrome.driver", "/Users/styl3r/Downloads/chromedriver-mac-arm64/chromedriver");
         if (isUsingHub()) {
             super.setup();
         } else {
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless=new", "--disable-gpu", "--no-sandbox");
+//            options.addArguments("--headless=new", "--disable-gpu", "--no-sandbox");
 
             setDriver(TestBench.createDriver(new ChromeDriver(options)));
         }
