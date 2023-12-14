@@ -1,6 +1,6 @@
-# Add-on template for Vaadin with an embedded Lit component 
+# Add-on template for Vaadin (v14-v24) Keypad Field 
 
-![clock-element](https://user-images.githubusercontent.com/991105/184157011-9cdd51bb-2a57-4698-9fbb-e539d382e99f.png)
+![keypad-field](https://github.com/bare-metal-studio/keypad-field/blob/v24/screenshot.png?raw=true)
 
 You should start from this project, if your add-on will be based on custom Lit HTML element (that you are not planning to publish through npm) and provide Java API for the rest of the application.
 As an example this project implements a simple clock-element to display current time based on browser. 
